@@ -3,9 +3,30 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <div id="welcome">
+      <h1>Welcome</h1>
+      <button type="button" id="btn-login">Login</button>
+    </div>
+
+    <div id="students-section" style="display: none">
+      <h1>Students</h1>
+      
+      <form id="newStudent">
+        <input type="text" name="firstName" placeholder="First Name" id="firstName">
+        <input type="text" name="lastName" placeholder="Last Name" id="lastName">
+        <input type="submit" name="name" value="Create New Student">
+      </form>
+
+
+      <ul id="student-list"></ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.auth0.com/js/lock/10.4/lock.min.js"></script>
+    <script src="/javascripts/script.js" charset="utf-8"></script>
   </body>
 </html>
